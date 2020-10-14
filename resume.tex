@@ -1,0 +1,112 @@
+\documentclass[10pt,a4paper]{article}		
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{titlesec}
+\usepackage{framed}
+\usepackage{geometry}
+
+\usepackage{showframe} % for debugging
+
+% ====== STYLING ======
+\pagestyle{empty}
+\geometry{top=1.25cm, bottom=-.6cm, left=1.5cm, right=1.5cm} 	
+\definecolor{bordercolor}{RGB}{186, 186, 186}
+\setlength{\topmargin}{-0.75in}
+\setlength{\oddsidemargin}{-0.75in}
+\setlength{\paperheight}{11in} 
+\setlength{\paperwidth}{8.5in}
+
+% ====== COMMANDS ======
+
+\newcommand{\bio}[8]{
+  \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+    \textbf{\LARGE #1} & \textbf{\large #2} \\
+    \texttt{#3} & \texttt{#4} \\
+    \texttt{#5} & \texttt{#6} \\
+    \texttt{#7} & \texttt{#8}
+  \end{tabular*}
+}  
+
+\newcommand{\sectionheading}[1]{
+  \vspace{12pt}
+
+  \textbf{\large #1}
+
+  \vspace{-8pt}
+  \textcolor{bordercolor}{\hrule}
+  \vspace{6pt}
+}
+
+\newcommand{\subheadinginfo}[4]{
+  \vspace{6pt}
+  
+  \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4} \\
+  \end{tabular*}
+  
+  \vspace{-4pt}
+}
+
+\newcommand{\listitem}[1]{
+  \item #1 \vspace{-5pt}
+}
+
+% ====== DOCUMENT ======
+
+\begin{document}
+
+\bio
+{Naruth Kongurai}
+{Software Engineer}
+{nkongurai@gmail.com}
+{(+66) 89-414-2244}
+{linkedin.com/in/naruthkongurai}
+{Bangkok, Thailand 10110}
+{github.com/naruthk}
+{www.naruth.dev}
+
+\sectionheading{Experience}
+
+\subheadinginfo
+{True Digital Group}
+{Bangkok, Thailand}
+{JavaScript Web Developer}
+{Jul 2019 - Present}
+
+\begin{itemize}
+  \listitem{Developing and maintaing a consumer-facing web app for redeeming 
+  rewards built using Next.js (React.js and Node.js)}
+  \listitem{Scaling to serve 200k daily active users with 1 million 
+  in monthly transaction rates}
+  \listitem{Involved in the entire product life cycle with Agile in mind, 
+  translated design into actual web pages, implemented Google Tag Manager 
+  tracking to boost SEO scores, used Redis caching and CDN for serving static content}
+\end{itemize}
+
+\subheadinginfo
+{Dapper Grooming}
+{Seattle, Washington USA}
+{Software Developer}
+{Aug 2018 - Mar 2019}
+
+\begin{itemize}
+  \listitem{Developed an iOS and Android app for booking haircut appointments}
+  \listitem{Created a Node.js API platform to provide RESTful APIs for handling appointments}
+\end{itemize}
+
+\subheadinginfo
+{OgilvyOne Worldwide}
+{Bangkok, Thailand}
+{Software Developer Intern}
+{Jul - Sep 2017}
+
+\begin{itemize}
+  \listitem{Designed and created responsive landing pages for product 
+  launches for brands like Nivea and Samsung}
+  \listitem{Led the migration of legacy PHP codebase to JavaScript (React.js)}
+\end{itemize}
+
+\sectionheading{Projects}
+
+\end{document}
