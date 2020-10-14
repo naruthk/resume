@@ -6,7 +6,7 @@ My resume in LaTeX and PDF formats.
 
 ## Development
 
-Edit `resume.tex` then run the following command:
+Make changes in `NaruthKonguraiResume.tex` and then run the following command:
 
 ```bash
 pdflatex NaruthKonguraiResume.tex
