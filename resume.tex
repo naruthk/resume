@@ -5,21 +5,19 @@
 \usepackage{framed}
 \usepackage{geometry}
 
-\usepackage{showframe} % for debugging
+% \usepackage{showframe} % for debugging
 
 % ====== STYLING ======
 \pagestyle{empty}
 \geometry{top=1.25cm, bottom=-.6cm, left=1.5cm, right=1.5cm} 	
 \definecolor{bordercolor}{RGB}{186, 186, 186}
-\setlength{\topmargin}{-0.75in}
-\setlength{\oddsidemargin}{-0.75in}
-\setlength{\paperheight}{11in} 
-\setlength{\paperwidth}{8.5in}
+\setlength{\topmargin}{-0.65in}
+\setlength{\textwidth}{6in}
 
 % ====== COMMANDS ======
 
 \newcommand{\bio}[8]{
-  \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+  \begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
     \textbf{\LARGE #1} & \textbf{\large #2} \\
     \texttt{#3} & \texttt{#4} \\
     \texttt{#5} & \texttt{#6} \\
@@ -29,18 +27,14 @@
 
 \newcommand{\sectionheading}[1]{
   \vspace{12pt}
-
-  \textbf{\large #1}
-
-  \vspace{-8pt}
-  \textcolor{bordercolor}{\hrule}
+  \textbf{\Large #1}
   \vspace{6pt}
 }
 
 \newcommand{\subheadinginfo}[4]{
   \vspace{6pt}
   
-  \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+  \begin{tabular*}{6.8in}{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
     \textit{#3} & \textit{#4} \\
   \end{tabular*}
@@ -96,17 +90,67 @@
 \end{itemize}
 
 \subheadinginfo
+{University of Washington}
+{Seattle, Washington USA}
+{Teaching Assistant}
+{Mar - May 2018}
+
+\begin{itemize}
+  \listitem{Led weekly sessions lecturing about Android development and basic
+  Kotlin and Java programming to a class of 30 students}
+  \listitem{Created an online resource guide for students: github.com/naruthk/android-info448-guides}
+\end{itemize}
+
+\subheadinginfo
 {OgilvyOne Worldwide}
 {Bangkok, Thailand}
 {Software Developer Intern}
 {Jul - Sep 2017}
 
 \begin{itemize}
-  \listitem{Designed and created responsive landing pages for product 
-  launches for brands like Nivea and Samsung}
+  \listitem{Designed using Adobe Photoshop and created responsive landing pages
+  in HTML and JavaScript for product launches for brands like Nivea and Samsung}
   \listitem{Led the migration of legacy PHP codebase to JavaScript (React.js)}
 \end{itemize}
 
 \sectionheading{Projects}
+
+\begin{itemize}
+  \listitem{\textbf{Music Lookup} (Aug 2020 - Present): Built React application for playing
+  Spotify music and finding news/lyrics related to playing song. Utilized Spotify Web APIs.}
+\end{itemize}
+
+\begin{itemize}
+  \listitem{\textbf{Data Modeling and Visualizing} (Feb 2020): Developed a prediction model in Python
+  to analyze redemption statistics}
+\end{itemize}
+
+\begin{itemize}
+  \listitem{\textbf{Movies Finder} (Aug 2018): Built a movies look-up database using React and hosted on Heroku}
+\end{itemize}
+
+\sectionheading{Education}
+
+\subheadinginfo
+{University of Washington}
+{Seattle, Washington USA}
+{Bachelor of Arts}
+{Sep 2014 - Jul 2018}
+
+\begin{itemize}
+  \listitem{Major: Communications (Emphasis in Technology) $\cdot$ Minor: Informatics}
+  \listitem{\textbf{Cumulative GPA}: 3.39}
+  \listitem{Clubs and Positions: Institute of Electrical and Electronics Engineers
+  (Web Developer), Thai-Student Association (Event Coordinator), XCoders Tech Meetups (Speaker)}
+\end{itemize}
+
+\sectionheading{Skills}
+
+\begin{itemize}
+  \listitem{\textbf{Technical}: JavaScript (ES6), Python 3, React, Node.js, SQL and NoSQL,
+  HTML5, CSS3, Git, Google Cloud Platform, Amazon AWS, Agile (Scrum)}
+  \listitem{\textbf{Soft Skills}: Bilingual (Thai and English), Public Speaker, Loves giving advice and
+  providing mentorship}
+\end{itemize}
 
 \end{document}
