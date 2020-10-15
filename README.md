@@ -24,7 +24,7 @@ Assuming you already have them installed, you can simply do the following:
 1. Update the content of `data.json`
 2. Run the following command to run the script file. Note that the more data you have, the longer it might take to compile (although this could be improved if I switched to writing Python or bash script, I think).
 ```bash
-node json-to-tex.js
+node jsonToLaTex.js
 ```
 3. Once a `*.tex` file has been generated, we can use any LaTex-supported package to convert the LaTex document into a PDF file. For instance, I am using `pdflatex`.
 ```bash
