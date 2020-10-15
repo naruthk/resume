@@ -40,7 +40,7 @@ function outputTwoColumns({ aside, mainSection }) {
   let outputData = `
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%     COLUMN ONE
+%     COLUMN ONE (ASIDE)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \\begin{minipage}[t]{.4\\textwidth}
@@ -57,7 +57,7 @@ function outputTwoColumns({ aside, mainSection }) {
 \\hfill
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%     COLUMN TWO
+%     COLUMN TWO (MAIN)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \\begin{minipage}[t]{0.55\\textwidth} 
@@ -68,14 +68,22 @@ function outputTwoColumns({ aside, mainSection }) {
     outputData += item;
   });
 
+  outputData += `
+\\end{minipage}%
+`;
+
   return outputData;
 }
 
-function outputEducation({ sectionTitle, items }) {
-  let outputData = `
-% ===== EDUCATION ====
-\\sectionheading{${sectionTitle}}
+function outputSectionTitle(title) {
+  return `
+  % ===== ${title.toUpperCase()} ====
+  \\sectionheading{${title}}
   `;
+}
+
+function outputEducation({ sectionTitle, items }) {
+  let outputData = outputSectionTitle(sectionTitle);
 
   items.map(item => {
     const {
@@ -109,10 +117,7 @@ function outputEducation({ sectionTitle, items }) {
 }
 
 function outputProjects({ sectionTitle, items }) {
-  let outputData = `
-% ===== PROJECTS ====
-\\sectionheading{${sectionTitle}}
-  `;
+  let outputData = outputSectionTitle(sectionTitle);
 
   items.map(item => {
     const {
@@ -131,6 +136,27 @@ function outputProjects({ sectionTitle, items }) {
     outputData += `
   \\begin{itemize}
     \\listitem{\\textbf{${name}} ${renderLinks} (${date}): ${description}}
+  \\end{itemize}
+    `; 
+  });
+
+  return outputData;
+}
+
+
+function outputCertifications({ sectionTitle, items }) {
+  let outputData = outputSectionTitle(sectionTitle);
+
+  items.map(item => {
+    const {
+      name,
+      date,
+      description
+    } = item;
+
+    outputData += `
+  \\begin{itemize}
+    \\listitem{\\textbf{${name}} (${date}): ${description}}
   \\end{itemize}
     `; 
   });
@@ -158,10 +184,14 @@ fs.readFile("data.json", (err, data) => {
     aside: [
       outputEducation(education),
       outputProjects(projects),
-      // outputCertificatioons(certifications)
+      outputCertifications(certifications)
     ],
     mainSection: []
   });
+
+  outputTextData += `
+\\end{document}
+`;
 
   /**
    * Write to file based on the output data that is generated
