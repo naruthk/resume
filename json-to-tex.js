@@ -151,13 +151,46 @@ function outputCertifications({ sectionTitle, items }) {
     const {
       name,
       date,
-      description
+      issuer
     } = item;
 
     outputData += `
   \\begin{itemize}
-    \\listitem{\\textbf{${name}} (${date}): ${description}}
+    \\listitem{\\textbf{${name}} (${date}): ${issuer}}
   \\end{itemize}
+    `; 
+  });
+
+  return outputData;
+}
+
+function outputExperience({ sectionTitle, items }) {
+  let outputData = outputSectionTitle(sectionTitle);
+
+  items.map(item => {
+    const {
+      name,
+      location,
+      dateOfEmployment,
+      position,
+      responsibilities
+    } = item;
+
+    outputData += `
+    \\subheadinginfo
+    {${name}}
+    {${location}}
+    {${position}}
+    {${dateOfEmployment}}
+    `;
+
+    const renderResponsibilites = responsibilities &&
+      responsibilities.map(responsibility => `\\listitem{${responsibility}}`).join("\n");
+
+    outputData += `
+    \\begin{itemize}
+      ${renderResponsibilites}
+    \\end{itemize}
     `; 
   });
 
@@ -171,7 +204,8 @@ fs.readFile("data.json", (err, data) => {
     biography,
     education,
     projects,
-    certifications
+    certifications,
+    workExperience
   } = JSON.parse(data.toString());
 
   outputTextData += `
@@ -186,7 +220,9 @@ fs.readFile("data.json", (err, data) => {
       outputProjects(projects),
       outputCertifications(certifications)
     ],
-    mainSection: []
+    mainSection: [
+      outputExperience(workExperience)
+    ]
   });
 
   outputTextData += `

@@ -98,5 +98,51 @@
         "issuer": "Coursera platform with certification by Google Cloud"
       }
     ]
+  },
+  "workExperience": {
+    "sectionTitle": "Work Experience",
+    "items": [
+      {
+        "name": "True Digital Group",
+        "location": "Bangkok, Thailand",
+        "dateOfEmployment": "Jul 2019 - Present",
+        "position": "JavaScript Web Developer",
+        "responsibilities": [
+          "Developing and maintaing a consumer-facing web app for redeeming rewards built using Next.js (React.js and Node.js)",
+          "Scaling to serve 200k daily active users with 1 million in monthly transaction rates",
+          "Involved in the entire product life cycle with Agile in mind, translated design into actual web pages, implemented Google Tag Manager tracking to boost SEO scores, used Redis caching and CDN for serving static content"
+        ]
+      },
+      {
+        "name": "Dapper Grooming",
+        "location": "Seattle, Washington USA",
+        "dateOfEmployment": "Aug 2018 - Mar 2019",
+        "position": "Software Developer",
+        "responsibilities": [
+          "Developed iOS and Android app for booking haircut appointments",
+          "Created a Node.js API platform to provide RESTful APIs for handling appointments"
+        ]
+      },
+      {
+        "name": "University of Washington",
+        "location": "Seattle, Washington USA",
+        "dateOfEmployment": "Mar - May 2018",
+        "position": "Teaching Assistant",
+        "responsibilities": [
+          "Led weekly sessions lecturing about Android development and basic Kotlin and Java programming to a class of 30 students",
+          "Created an online resource guide for students: \\href{https://github.com/naruthk/android-info448-guides}{github.com/naruthk/android-info448-guides}"
+        ]
+      },
+      {
+        "name": "OgilvyOne Worldwide",
+        "location": "Bangkok, Thailand",
+        "dateOfEmployment": "Jul - Sep 2017",
+        "position": "Software Developer Intern",
+        "responsibilities": [
+          "Designed using Adobe Photoshop and created responsive landing pages in HTML and JavaScript for product launches for brands like Nivea and Samsung",
+          "Involved in migrating legacy PHP codebase to JavaScript (React.js)"
+        ]
+      }
+    ]
   }
 }

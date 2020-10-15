@@ -12,7 +12,7 @@ Switching over to LaTex was tough at first, but it has since become much tidier 
 
 ## Development
 
-I've written a script using JavaScript that parses what's inside `data.json` into a LaTeX that can then later be compiled into PDF.
+I've written a script using JavaScript that parses what's inside `data.json` into a LaTeX document that can then later be compiled into PDF.
 
 In order to make any changes, the following library are required:
 
@@ -26,7 +26,7 @@ Assuming you already have them installed, you can simply do the following:
 ```bash
 node json-to-tex.js
 ```
-3. Once a `*.tex` file has been generated, we can use any LaTex-supported package to convert the LaTex document into a PDF file. For instance, I am using `pdflatex`:
+3. Once a `*.tex` file has been generated, we can use any LaTex-supported package to convert the LaTex document into a PDF file. For instance, I am using `pdflatex`.
 ```bash
 pdflatex NAME_OF_TEX_FILE.txt
 ```
