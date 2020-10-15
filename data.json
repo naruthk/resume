@@ -1,5 +1,8 @@
 {
   "biography": {
+    "firstName": "Naruth",
+    "lastName": "Kongurai",
+    "position": "Software Engineer",
     "emailAddress": "nkongurai@gmail.com",
     "mobileNumber": "(+66) 89-414-2244",
     "location": "Bangkok, Thailand 10110",
@@ -8,6 +11,7 @@
     "github": "https://github.com/naruthk"
   },
   "education": {
+    "sectionTitle": "Education",
     "items": [
       {
         "name": "University of Washington",
@@ -31,6 +35,7 @@
     ]
   },
   "projects": {
+    "sectionTitle": "Technical Projects",
     "items": [
       {
         "name": "Music Lookup",
@@ -85,6 +90,7 @@
     ]
   },
   "certifications": {
+    "sectionTitle": "Certifications",
     "items": [
       {
         "name": "Developing Applications with Google Platform",
