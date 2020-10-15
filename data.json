@@ -1,0 +1,96 @@
+{
+  "biography": {
+    "emailAddress": "nkongurai@gmail.com",
+    "mobileNumber": "(+66) 89-414-2244",
+    "location": "Bangkok, Thailand 10110",
+    "website": "https://www.naruth.dev",
+    "linkedin": "https://linkedin.com/in/naruthkongurai",
+    "github": "https://github.com/naruthk"
+  },
+  "education": {
+    "items": [
+      {
+        "name": "University of Washington",
+        "location": "Seattle, Washington USA",
+        "dateOfCompletion": "Sep 2014 - Jul 2018",
+        "degreeType": "Bachelor of Arts",
+        "major": "Communications (Emphasis in Technology)",
+        "minor": "Informatics",
+        "gpa": "3.39",
+        "relevantCourses": [
+          "Data Structures and Algorithms",
+          "Computer Programming in Java",
+          "Human-Computer Interaction"
+        ],
+        "extracurriculars": [
+          "Institute of Electrical and Electronics Engineers (Web Developer)",
+          "Thai-Student Association (Event Coordinator)",
+          "XCoders Tech Meetups (Speaker)"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "items": [
+      {
+        "name": "Music Lookup",
+        "date": "Aug 2020 - Present",
+        "description": "Built React application for playing Spotify music and finding news/lyrics. Utilized Spotify Web APIs.",
+        "urls": {
+          "github": null,
+          "blog": null,
+          "website": null
+        }
+      },
+      {
+        "name": "Data Modeling and Visualization",
+        "date": "Feb 2020",
+        "description": "Developed a prediction model in Python to analyze redemption statistics",
+        "urls": {
+          "github": null,
+          "blog": null,
+          "website": null
+        }
+      },
+      {
+        "name": "Movies Finder",
+        "date": "Aug 2018",
+        "description": "Built a movies look-up database using React and hosted on Heroku Cloud",
+        "urls": {
+          "github": "https://github.com/naruthk/movies-n-chill-app",
+          "blog": null,
+          "website": null
+        }
+      },
+      {
+        "name": "UW Food App for iOS",
+        "date": "Dec 2017",
+        "description": "Co-developed iOS app for discovering dining options available on campus",
+        "urls": {
+          "github": "https://github.com/naruthk/mobile-uw-food-app",
+          "blog": null,
+          "website": null
+        }
+      },
+      {
+        "name": "Digital Clock (Chrome New Tab Extension)",
+        "date": "Feb 2017",
+        "description": "Built a Chrome extension that displays a customizable clock for the New Tab screen",
+        "urls": {
+          "github": null,
+          "blog": null,
+          "website": null
+        }
+      }
+    ]
+  },
+  "certifications": {
+    "items": [
+      {
+        "name": "Developing Applications with Google Platform",
+        "date": "Jul 2020",
+        "issuer": "Coursera platform with certification by Google Cloud"
+      }
+    ]
+  }
+}
