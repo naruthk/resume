@@ -16,7 +16,7 @@
 % ====== STYLING ======
 \geometry{top=2.5cm, bottom=-.6cm, left=2cm, right=1.5cm} 	
 \definecolor{bordercolor}{RGB}{186, 186, 186}
-\setlength{\textwidth}{6.5in}
+\setlength{\textwidth}{6.7in}
 \setlength{\parindent}{0pt} % Hack to match biography width
 
 % ====== STYLING (HEADER) ======

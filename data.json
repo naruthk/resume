@@ -40,31 +40,19 @@
       {
         "name": "Music Lookup",
         "date": "Aug 2020 - Present",
-        "description": "Built React application for playing Spotify music and finding news/lyrics. Utilized Spotify Web APIs.",
-        "urls": {
-          "github": null,
-          "blog": null,
-          "website": null
-        }
+        "description": "Built React application for playing Spotify music and finding news/lyrics. Utilized Spotify Web APIs."
       },
       {
         "name": "Data Modeling and Visualization",
         "date": "Feb 2020",
-        "description": "Developed a prediction model in Python to analyze redemption statistics",
-        "urls": {
-          "github": null,
-          "blog": null,
-          "website": null
-        }
+        "description": "Developed a prediction model in Python to analyze redemption statistics"
       },
       {
         "name": "Movies Finder",
         "date": "Aug 2018",
         "description": "Built a movies look-up database using React and hosted on Heroku Cloud",
         "urls": {
-          "github": "https://github.com/naruthk/movies-n-chill-app",
-          "blog": null,
-          "website": null
+          "gitHub": "https://github.com/naruthk/movies-n-chill-app"
         }
       },
       {
@@ -72,20 +60,13 @@
         "date": "Dec 2017",
         "description": "Co-developed iOS app for discovering dining options available on campus",
         "urls": {
-          "github": "https://github.com/naruthk/mobile-uw-food-app",
-          "blog": null,
-          "website": null
+          "gitHub": "https://github.com/naruthk/mobile-uw-food-app"
         }
       },
       {
         "name": "Digital Clock (Chrome New Tab Extension)",
         "date": "Feb 2017",
-        "description": "Built a Chrome extension that displays a customizable clock for the New Tab screen",
-        "urls": {
-          "github": null,
-          "blog": null,
-          "website": null
-        }
+        "description": "Built a Chrome extension that displays a customizable clock for the New Tab screen"
       }
     ]
   },
@@ -143,6 +124,27 @@
           "Involved in migrating legacy PHP codebase to JavaScript (React.js)"
         ]
       }
+    ]
+  },
+  "skills": {
+    "sectionTitle": "Skills",
+    "technical": [
+      "JavaScript (ES6)",
+      "Python 3",
+      "React",
+      "Node.js",
+      "SQL and NoSQL",
+      "HTML5",
+      "CSS3",
+      "Git",
+      "Google Cloud Platform",
+      "Amazon AWS",
+      "Agile (Scrum)"
+    ],
+    "soft": [
+      "Bilingual (Thai and English)",
+      "Public Speaker",
+      "Loves giving advice and providing mentorship"
     ]
   }
 }

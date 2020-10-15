@@ -2,7 +2,8 @@
 
 const fs = require("fs");
 
-const OUTPUT_FILE_NAME = "Test";
+const OUTPUT_FILE_NAME = "NaruthKonguraiResume";
+const DOCUMENT_STYLE_CLASS_NAME = "naruthkongurai_resume"; // .cls file name
 
 let outputTextData = "";
 
@@ -131,7 +132,7 @@ function outputProjects({ sectionTitle, items }) {
       if (!urls[key]) return "";
 
       return `$\\cdot$ \\href{${urls[key]}}{(${key[0].toUpperCase()}${key.substring(1)})}`;
-    }).join(" ");
+    }).join(" ") || "";
 
     outputData += `
   \\begin{itemize}
@@ -197,6 +198,19 @@ function outputExperience({ sectionTitle, items }) {
   return outputData;
 }
 
+function outputSkills({ sectionTitle, technical, soft }) {
+  let outputData = outputSectionTitle(sectionTitle);
+
+  outputData += `
+  \\begin{itemize}
+    \\listitem{${technical.join(", ")}}
+    \\listitem{${soft.join(", ")}}
+  \\end{itemize}
+  `;
+
+  return outputData;
+}
+
 fs.readFile("data.json", (err, data) => { 
   if (err) throw err; 
 
@@ -205,11 +219,12 @@ fs.readFile("data.json", (err, data) => {
     education,
     projects,
     certifications,
-    workExperience
+    workExperience,
+    skills
   } = JSON.parse(data.toString());
 
   outputTextData += `
-\\documentclass{naruthkongurai_resume}
+\\documentclass{${DOCUMENT_STYLE_CLASS_NAME}}
 \\begin{document}
   `;
 
@@ -221,7 +236,8 @@ fs.readFile("data.json", (err, data) => {
       outputCertifications(certifications)
     ],
     mainSection: [
-      outputExperience(workExperience)
+      outputExperience(workExperience),
+      outputSkills(skills)
     ]
   });
 
