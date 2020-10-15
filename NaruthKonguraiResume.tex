@@ -4,44 +4,69 @@
 \usepackage{titlesec}
 \usepackage{framed}
 \usepackage{geometry}
+\usepackage{minipage-marginpar}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
 
-% \usepackage{showframe} % for debugging
+% \usepackage{showframe} % used for debugging. comment out before publishing
 
 % ====== STYLING ======
-\pagestyle{empty}
-\geometry{top=1.25cm, bottom=-.6cm, left=1.5cm, right=1.5cm} 	
+\geometry{top=2.5cm, bottom=-.6cm, left=2cm, right=1.5cm} 	
 \definecolor{bordercolor}{RGB}{186, 186, 186}
-\setlength{\topmargin}{-0.65in}
-\setlength{\textwidth}{6in}
+\setlength{\textwidth}{6.5in}
+\setlength{\parindent}{0pt} % Hack to match biography width
+
+% ====== STYLING (HEADER) ======
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[LE,RO]{Last updated: {\today}}
 
 % ====== COMMANDS ======
 
+% Renders point of contact information
 \newcommand{\bio}[8]{
-  \begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
-    \textbf{\LARGE #1} & \textbf{\large #2} \\
-    \texttt{#3} & \texttt{#4} \\
-    \texttt{#5} & \texttt{#6} \\
-    \texttt{#7} & \texttt{#8}
-  \end{tabular*}
+  \noindent
+  \begin{minipage}[t]{.5\textwidth}
+    \textbf{\LARGE #1} \\
+    \texttt{#3} \\
+    \texttt{#5} \\
+    \texttt{#7}
+  \end{minipage}%
+  \begin{minipage}[t]{.5\textwidth}
+    \raggedleft
+    \textbf{\large #2} \\
+    \texttt{#4} \\
+    \texttt{#6} \\
+    \texttt{#8}
+  \end{minipage}
+
+  \vspace{6pt}
 }  
 
+% Renders the Heading for each section
 \newcommand{\sectionheading}[1]{
-  \vspace{12pt}
+  \vspace{14pt}
   \textbf{\Large #1}
   \vspace{6pt}
 }
 
+% Renders each individual subheading (employer name, date of employment)
 \newcommand{\subheadinginfo}[4]{
   \vspace{6pt}
-  
-  \begin{tabular*}{6.8in}{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    \textit{#3} & \textit{#4} \\
-  \end{tabular*}
-  
+  \noindent
+  \begin{minipage}[t]{.5\textwidth}
+    \textbf{#1} \\
+    #2
+  \end{minipage}%
+  \begin{minipage}[t]{.5\textwidth}
+    \raggedleft
+    \textit{#3} \\
+    \textit{#4}
+  \end{minipage}
   \vspace{-4pt}
 }
 
+% Renders each individual item in a list
 \newcommand{\listitem}[1]{
   \item #1 \vspace{-5pt}
 }
@@ -50,107 +75,148 @@
 
 \begin{document}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     POINT OF CONTACT
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bio
 {Naruth Kongurai}
 {Software Engineer}
-{nkongurai@gmail.com}
+{\href{mailto:nkongurai@gmail.com}{nkongurai@gmail.com}}
 {(+66) 89-414-2244}
-{linkedin.com/in/naruthkongurai}
+{\href{https://linkedin.com/in/naruthkongurai}{linkedin.com/in/naruthkongurai}}
 {Bangkok, Thailand 10110}
-{github.com/naruthk}
-{www.naruth.dev}
+{\href{https://github.com/naruthk}{github.com/naruthk}}
+{\href{https://www.naruth.dev}{naruth.dev}}
 
-\sectionheading{Experience}
+\noindent
 
-\subheadinginfo
-{True Digital Group}
-{Bangkok, Thailand}
-{JavaScript Web Developer}
-{Jul 2019 - Present}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[t]{.4\textwidth}
+  \raggedright
 
-\begin{itemize}
-  \listitem{Developing and maintaing a consumer-facing web app for redeeming 
-  rewards built using Next.js (React.js and Node.js)}
-  \listitem{Scaling to serve 200k daily active users with 1 million 
-  in monthly transaction rates}
-  \listitem{Involved in the entire product life cycle with Agile in mind, 
-  translated design into actual web pages, implemented Google Tag Manager 
-  tracking to boost SEO scores, used Redis caching and CDN for serving static content}
-\end{itemize}
+  % ===== EDUCATION ====
+  \sectionheading{Education}
 
-\subheadinginfo
-{Dapper Grooming}
-{Seattle, Washington USA}
-{Software Developer}
-{Aug 2018 - Mar 2019}
+  \textbf{University of Washington} \\
+  Seattle, Washington USA \\
+  Bachelor of Arts \\
+  \textit{Sep 2014 - Jul 2018}
 
-\begin{itemize}
-  \listitem{Developed an iOS and Android app for booking haircut appointments}
-  \listitem{Created a Node.js API platform to provide RESTful APIs for handling appointments}
-\end{itemize}
+  \begin{itemize}
+    \listitem{\textbf{Major}: Communications (Emphasis in Technology) $\cdot$ Minor: Informatics}
+    \listitem{\textbf{Cumulative GPA}: 3.39}
+    \listitem{Relevant Courses: Data Structures and Algorithms, Computer Programming in Java, Human-Computer Interaction}
+    \listitem{Clubs and Positions: Institute of Electrical and Electronics Engineers
+    (Web Developer), Thai-Student Association (Event Coordinator), XCoders Tech Meetups (Speaker)}
+  \end{itemize}
 
-\subheadinginfo
-{University of Washington}
-{Seattle, Washington USA}
-{Teaching Assistant}
-{Mar - May 2018}
+  % ===== PROJECTS =====
+  \sectionheading{Technical Projects}
 
-\begin{itemize}
-  \listitem{Led weekly sessions lecturing about Android development and basic
-  Kotlin and Java programming to a class of 30 students}
-  \listitem{Created an online resource guide for students: github.com/naruthk/android-info448-guides}
-\end{itemize}
+  \begin{itemize}
+    \listitem{\textbf{Music Lookup} (Aug 2020 - Present): Built React application for playing
+    Spotify music and finding news/lyrics. Utilized Spotify Web APIs.}
+  \end{itemize}
 
-\subheadinginfo
-{OgilvyOne Worldwide}
-{Bangkok, Thailand}
-{Software Developer Intern}
-{Jul - Sep 2017}
+  \begin{itemize}
+    \listitem{\textbf{Data Modeling and Visualizing} (Feb 2020): Developed a prediction model in Python
+    to analyze redemption statistics}
+  \end{itemize}
 
-\begin{itemize}
-  \listitem{Designed using Adobe Photoshop and created responsive landing pages
-  in HTML and JavaScript for product launches for brands like Nivea and Samsung}
-  \listitem{Led the migration of legacy PHP codebase to JavaScript (React.js)}
-\end{itemize}
+  \begin{itemize}
+    \listitem{\textbf{Movies Finder} (Aug 2018): Built a movies look-up database using React and hosted on Heroku Cloud}
+  \end{itemize}
 
-\sectionheading{Projects}
+  \begin{itemize}
+    \listitem{\textbf{Digital Clock New Tab} (Feb 2017): Built a Chrome extension that displays a customizable clock for the New Tab screen}
+  \end{itemize}
 
-\begin{itemize}
-  \listitem{\textbf{Music Lookup} (Aug 2020 - Present): Built React application for playing
-  Spotify music and finding news/lyrics related to playing song. Utilized Spotify Web APIs.}
-\end{itemize}
+  \sectionheading{Certifications}
 
-\begin{itemize}
-  \listitem{\textbf{Data Modeling and Visualizing} (Feb 2020): Developed a prediction model in Python
-  to analyze redemption statistics}
-\end{itemize}
+  \begin{itemize}
+    \listitem{\textbf{Developing Applications with Google Platform} (Jul 2020) - Coursera platform with certification by Google Cloud}
+  \end{itemize}
 
-\begin{itemize}
-  \listitem{\textbf{Movies Finder} (Aug 2018): Built a movies look-up database using React and hosted on Heroku}
-\end{itemize}
+\end{minipage}
+\hfill
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[t]{0.55\textwidth} 
+  \raggedright
 
-\sectionheading{Education}
+  % ===== EXPERIENCE ======
+  \sectionheading{Work Experience}
 
-\subheadinginfo
-{University of Washington}
-{Seattle, Washington USA}
-{Bachelor of Arts}
-{Sep 2014 - Jul 2018}
+  \subheadinginfo
+  {True Digital Group}
+  {Bangkok, Thailand}
+  {JavaScript Web Developer}
+  {Jul 2019 - Present}
 
-\begin{itemize}
-  \listitem{Major: Communications (Emphasis in Technology) $\cdot$ Minor: Informatics}
-  \listitem{\textbf{Cumulative GPA}: 3.39}
-  \listitem{Clubs and Positions: Institute of Electrical and Electronics Engineers
-  (Web Developer), Thai-Student Association (Event Coordinator), XCoders Tech Meetups (Speaker)}
-\end{itemize}
+  \begin{itemize}
+    \listitem{Developing and maintaing a consumer-facing web app for redeeming 
+    rewards built using Next.js (React.js and Node.js)}
+    \listitem{Scaling to serve 200k daily active users with 1 million 
+    in monthly transaction rates}
+    \listitem{Involved in the entire product life cycle with Agile in mind, 
+    translated design into actual web pages, implemented Google Tag Manager 
+    tracking to boost SEO scores, used Redis caching and CDN for serving static content}
+  \end{itemize}
 
-\sectionheading{Skills}
+  \subheadinginfo
+  {Dapper Grooming}
+  {Seattle, Washington USA}
+  {Software Developer}
+  {Aug 2018 - Mar 2019}
 
-\begin{itemize}
-  \listitem{\textbf{Technical}: JavaScript (ES6), Python 3, React, Node.js, SQL and NoSQL,
-  HTML5, CSS3, Git, Google Cloud Platform, Amazon AWS, Agile (Scrum)}
-  \listitem{\textbf{Soft Skills}: Bilingual (Thai and English), Public Speaker, Loves giving advice and
-  providing mentorship}
-\end{itemize}
+  \begin{itemize}
+    \listitem{Developed iOS and Android app for booking haircut appointments}
+    \listitem{Created a Node.js API platform to provide RESTful APIs for handling appointments}
+  \end{itemize}
+
+  \subheadinginfo
+  {University of Washington}
+  {Seattle, Washington USA}
+  {Teaching Assistant}
+  {Mar - May 2018}
+
+  \begin{itemize}
+    \listitem{Led weekly sessions lecturing about Android development and basic
+    Kotlin and Java programming to a class of 30 students}
+    \listitem{Created an online resource guide for students: \href{https://github.com/naruthk/android-info448-guides}{github.com/naruthk/android-info448-guides}}
+  \end{itemize}
+
+  \subheadinginfo
+  {OgilvyOne Worldwide}
+  {Bangkok, Thailand}
+  {Software Developer Intern}
+  {Jul - Sep 2017}
+
+  \begin{itemize}
+    \listitem{Designed using Adobe Photoshop and created responsive landing pages
+    in HTML and JavaScript for product launches for brands like Nivea and Samsung}
+    \listitem{Involved in migrating legacy PHP codebase to JavaScript (React.js)}
+  \end{itemize}
+
+  % ===== SKILLS =====
+  \sectionheading{Skills}
+
+  \begin{itemize}
+    \listitem{\textbf{Technical}: JavaScript (ES6), Python 3, React, Node.js, SQL and NoSQL,
+    HTML5, CSS3, Git, Google Cloud Platform, Amazon AWS, Agile (Scrum)}
+    \listitem{\textbf{Soft Skills}: Bilingual (Thai and English), Public Speaker, Loves giving advice and
+    providing mentorship}
+  \end{itemize}
+
+\end{minipage}%
 
 \end{document}
