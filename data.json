@@ -89,9 +89,9 @@
         "dateOfEmployment": "Jul 2019 - Present",
         "position": "JavaScript Web Developer",
         "responsibilities": [
-          "Developing and maintaing a consumer-facing web app for redeeming rewards built using Next.js (React.js and Node.js)",
+          "Developing and maintaining a consumer-facing web app for redeeming rewards built using Next.js (React.js and Node.js)",
           "Scaling to serve 200k daily active users with 1 million in monthly transaction rates",
-          "Involved in the entire product life cycle with Agile in mind, translated design into actual web pages, implemented Google Tag Manager tracking to boost SEO scores, used Redis caching and CDN for serving static content"
+          "Involving in entire product life cycle with Agile in mind, translating design into responsive websites, implementing Google Tag Manager tracking to boost SEO scores, using Redis caching and CDN for serving static content"
         ]
       },
       {
@@ -142,7 +142,7 @@
       "Agile (Scrum)"
     ],
     "soft": [
-      "Bilingual (Thai and English)",
+      "Bilingual (Thai and English - fluent)",
       "Public Speaker",
       "Loves giving advice and providing mentorship"
     ]
