@@ -1,0 +1,24 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "Automatic tooling to create my resume in PDF and LaTex formats",
+  "main": "helpers.js",
+  "scripts": {
+    "generate": "node jsonToLatex.js && pdflatex NaruthKonguraiResume.tex"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naruthk/resume.git"
+  },
+  "keywords": [
+    "latex",
+    "pdf",
+    "resume"
+  ],
+  "author": "Naruth Kongurai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/naruthk/resume/issues"
+  },
+  "homepage": "https://github.com/naruthk/resume#readme"
+}
