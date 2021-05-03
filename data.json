@@ -86,12 +86,12 @@
       {
         "name": "True Digital Group",
         "location": "Bangkok, Thailand",
-        "dateOfEmployment": "Jul 2019 - Present",
+        "dateOfEmployment": "Jul 2019 - April 2021",
         "position": "JavaScript Web Developer",
         "responsibilities": [
-          "Developing and maintaining a consumer-facing web app for redeeming rewards built using Next.js (React.js and Node.js)",
-          "Analyzing and researching ways to improve scalability to support 100k daily active users with 1 million in monthly transaction rates",
-          "Involving in entire product life cycle with Agile in mind, translating design into responsive websites, implementing Google Tag Manager tracking to boost SEO scores, using Redis caching and CDN for serving static content"
+          "Developed and maintained a consumer-facing web app for redeeming rewards built using Next.js (React.js and Node.js)",
+          "Analyzed and researched ways to improve scalability to support 100k daily active users with 1 million in monthly transaction rates",
+          "Involved in entire product life cycle with Agile in mind, translated design into responsive websites, implemented Google Tag Manager tracking to boost SEO scores, used Redis caching and CDN for serving static content"
         ]
       },
       {
@@ -136,6 +136,7 @@
       "SQL and NoSQL",
       "HTML5",
       "CSS3",
+      "TypeScript",
       "Git",
       "Google Cloud Platform",
       "Amazon AWS",
